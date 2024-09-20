@@ -57,7 +57,7 @@ class News:
 			return None
 
 	def get_last_news_id(self):
-		sql = "SELECT MAX(id) FROM news"
+		sql = "SELECT MAX(new_id) FROM news"
 		self.cursor.execute(sql)
 		result = self.cursor.fetchone()
 		return result[0] if result[0] is not None else 0

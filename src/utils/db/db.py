@@ -46,12 +46,11 @@ class DB:
 
             self.cursor.execute("""
                 CREATE TABLE IF NOT EXISTS news (
-                    id INT AUTO_INCREMENT PRIMARY KEY,
+                    new_id INT AUTO_INCREMENT PRIMARY KEY,
                     title VARCHAR(255) NOT NULL,
                     keyword VARCHAR(255) NOT NULL,
                     channel VARCHAR(255) NOT NULL,
-                    link VARCHAR(255) NOT NULL,
-                    new_id INT NOT NULL
+                    link VARCHAR(255) NOT NULL
                 )
             """)
             self.connection.commit()
