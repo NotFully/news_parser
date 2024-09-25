@@ -38,9 +38,9 @@ class News:
 
 	def get_news(self, news_id: int) -> NewsItem | None:
 		sql = """
-		    SELECT id, title, link, keyword, channel 
+		    SELECT new_id, title, link, keyword, channel 
 		    FROM news
-		    WHERE id = %s
+		    WHERE new_id = %s
 		"""
 		self.cursor.execute(sql, (news_id,))
 		res = self.cursor.fetchone()
